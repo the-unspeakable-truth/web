@@ -45,3 +45,6 @@ if (goBackBtn) {
     window.location.href = "../index.html";
   });
 }
+
+const base = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, "/");
+window.location.href = base + e.target.dataset.link;
