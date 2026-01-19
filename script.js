@@ -32,33 +32,11 @@ if (themeBtn) {
 }
 
 // Navigate to page when button is clicked
-const aboutusbtn = document.querySelector("about-us");
-if (aboutusbtn) {
-  aboutusbtn.addEventListener("click", () => {
-    window.location.href = "pages/about-us.html";
-  });
-}
-
-const concertsbtn = document.querySelector("concerts");
-if (concertsbtn) {
-  concertsbtn.addEventListener("click", () => {
-    window.location.href = "pages/concerts.html";
-  });
-}
-
-const contactbtn = document.querySelector("contact-us");
-if (contactbtn) {
-  contactbtn.addEventListener("click", () => {
-    window.location.href = "pages/contact.html";
-  });
-}
-
-const shopbtn = document.querySelector("shop");
-if (shopbtn) {
-  shopbtn.addEventListener("click", () => {
-    window.location.href = "pages/shop.html";
-  });
-}
+document.addEventListener("click", (e) => {
+  if (e.target.matches("button[data-link]")) {
+    window.location.href = e.target.dataset.link;
+  }
+});
 
 // Go back button functionality
 const goBackBtn = document.getElementById("goBackBtn");
