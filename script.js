@@ -31,11 +31,32 @@ if (themeBtn) {
   });
 }
 
-// Navigate to page2 when Explore button is clicked
-const exploreBtn = document.querySelector(".cta");
-if (exploreBtn && exploreBtn.textContent === "Explore") {
-  exploreBtn.addEventListener("click", () => {
-    window.location.href = "page2.html";
+// Navigate to page when button is clicked
+const aboutusbtn = document.querySelector("about-us");
+if (aboutusbtn) {
+  aboutusbtn.addEventListener("click", () => {
+    window.location.href = "pages/about-us.html";
+  });
+}
+
+const concertsbtn = document.querySelector("concerts");
+if (concertsbtn) {
+  concertsbtn.addEventListener("click", () => {
+    window.location.href = "pages/concerts.html";
+  });
+}
+
+const contactbtn = document.querySelector("contact-us");
+if (contactbtn) {
+  contactbtn.addEventListener("click", () => {
+    window.location.href = "pages/contact.html";
+  });
+}
+
+const shopbtn = document.querySelector("shop");
+if (shopbtn) {
+  shopbtn.addEventListener("click", () => {
+    window.location.href = "pages/shop.html";
   });
 }
 
@@ -43,6 +64,6 @@ if (exploreBtn && exploreBtn.textContent === "Explore") {
 const goBackBtn = document.getElementById("goBackBtn");
 if (goBackBtn) {
   goBackBtn.addEventListener("click", () => {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   });
 }
