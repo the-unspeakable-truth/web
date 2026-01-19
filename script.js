@@ -34,7 +34,8 @@ if (themeBtn) {
 // Navigate to page when button is clicked
 document.addEventListener("click", (e) => {
   if (e.target.matches("button[data-link]")) {
-    window.location.href = e.target.dataset.link;
+    const base = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/"));
+    window.location.href = window.location.origin + base + "/" + e.target.dataset.link;
   }
 });
 
@@ -45,6 +46,3 @@ if (goBackBtn) {
     window.location.href = "../index.html";
   });
 }
-
-const base = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, "/");
-window.location.href = base + e.target.dataset.link;
